@@ -160,7 +160,7 @@ for i in range(repeat_times):
         
     d = len(pca.explained_variance_ratio_)
     L = 38
-    r = 1                       
+    r = 4                       
     gen_e2LSH_family_all = []
     for i in range(L):
         gen_e2LSH_family_all.append([ genPara(d,r),genPara(d,r),genPara(d,r),genPara(d,r)
@@ -284,7 +284,7 @@ for i in range(repeat_times):
         for x in range(samples_for_train):
             distance = euclideanDistance(X_h[z], X_h[x])
             distance_m.append(distance)
-    theta = 0.5*max(distance_m)
+    theta = 0.6*max(distance_m)
     print('阈值',theta)
     
     index_found_Z = []
